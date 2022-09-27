@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        section {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: lightgreen;
+            border-radius: 25px;
+            margin-bottom: 20px
+        }
+
+        .page-padding {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: auto;
+        }
+
+        .one {
+            border-radius: 25px;
+            align-items: center;
+            display: flex;
+
+            justify-content: center;
+            margin: auto;
+
+            flex-wrap: wrap;
+        }
+
+        .two {
+            max-width: 1200px;
+        }
+
+        .cercle {
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            background-color: blue;
+            position: relative;
+            animation: move 5s infinite;
+        }
+
+        @keyframes move {
+            0% {
+                top: 0px;
+                left: 0px;
+                background: red;
+            }
+
+            25% {
+                top: 0px;
+                left: 950px;
+                background: blue;
+            }
+
+            50% {
+                top: 600px;
+                left: 950px;
+                background: yellow;
+            }
+
+            75% {
+                top: 600px;
+                left: 0px;
+                background: green;
+            }
+
+            100% {
+                top: 0px;
+                left: 0px;
+                background: red;
+            }
+        }
+
+        .header {
+            font-size: 60px;
+            font-weight: 900;
+            color: red;
+            text-align: center;
+            text-decoration: underline;
+            animation-name: heading;
+            animation-duration: 3s;
+        }
+
+        @keyframes heading {
+            from {
+                opacity: 0%;
+            }
+
+            to {
+                opacity: 100%;
+            }
+        }
+
+        .paragraph {
+            text-align: center;
+            font-size: 24px;
+            color: darkblue;
+            animation-name: paragraph;
+            animation-duration: 10s;
+        }
+
+        @keyframes paragraph {
+
+            from {
+                opacity: 0%;
+            }
+
+            to {
+                opacity: 100%;
+            }
+        }
+
+        .btn {
+            padding: 15px;
+            background-color: black;
+            border: 1px solid white;
+            color: white;
+            font-size: 16px;
+            border-radius: 10px;
+            animation-name: button;
+            animation-duration: 14s;
+            cursor: pointer;
+        }
+        .btn:hover {
+            padding: 15px;
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+        @keyframes button {
+            from {
+                opacity: 0%;
+            }
+
+            to {
+                opacity: 100%;
+            }
+        }
+        .drive {
+            width: auto;
+            height: 300px;
+            margin: auto;
+            max-width: 1200px;
+        }
+        .driver {
+            left: auto;
+            margin: auto;
+            height: 80px;
+            width: 100px;
+            position: absolute;
+            bottom: 24% !important;
+            margin-bottom: 50px;
+            animation-name: driver;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes driver {
+            from {
+                transform: translateX(0px);
+            }
+
+            to {
+                transform: translateX(1000px);
+            }
+        }
+
+        .second-section {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            border-radius: 25px;
+            align-items: center;
+            display: flex;
+            background-color: lightgreen;
+            justify-content: center;
+            margin: auto;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+            height: 100%;
+        }
+
+        .cards {
+            padding: 10px;
+            display: flex;
+        }
+
+        .card {
+            border: 1px solid black;
+            padding: 10px;
+            max-width: 350px;
+            font-size: 24px;
+            color: black !important;
+            position: relative;
+            transition-duration: 0.8s;
+            margin-left: 30px;
+            width: 100%;
+            height: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .card-heading {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+
+        .card:hover {
+            transition-duration: 0.8s;
+            transform: scale(1.03);
+            color: red !important;
+        }
+
+        .about-us-wrapper {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: 700;
+            align-items: center;
+        }
+
+        h3 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .card-content {
+            margin-bottom: 16px;
+            border: 1px solid black;
+            background-color: darkgray;
+            border-radius: 20px;
+            padding: 24px;
+            animation-name: card-content;
+            animation-duration: 5s;
+            transition-duration: 0.8s;
+        }
+
+        .card-content:hover {
+            background-color: white;
+            transform: scale(1.03);
+            transition-duration: 0.8s;
+            border: 1px solid red;
+        }
+        #popup{
+            width:500px;
+            height:400px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div class="page-padding">
+            <div class="container"></div>
+            <div class="one">
+                <div class="two">
+                    <div class="cercle"></div>
+                    <h1 class="header">KEY FRAME ANIMATION</h1>
+                    <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto earum rem vitae
+                        quos modi,
+                        quaerat nobis deserunt velit pariatur, veritatis illo assumenda ab cumque dignissimos?
+                        Harum odit voluptas in possimus!</p>
+                    <button class="btn">CLICK HERE</button>
+                    <div class="drive">
+                        <img class="driver" src="z.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+    </section>
+    <section class="second-section">
+        <div class="page-padding">
+            <div class="container">
+                <div class="cards">
+                    <a href="www.instagram.com">
+                        <div class="card " id="first-card">
+
+                            <h1 class="card-heading"> Blog1</h1>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum sequi laboriosam
+                            harum, magnam neque, enim eum non at debitis maxime nulla hic iure beatae esse! Velit
+                            corporis nihil facilis sapiente?
+                        </div>
+                    </a>
+                    <a href="www.facebook.com">
+                        <div class="card" id="second-card">
+
+                            <h1 class="card-heading"> Blog2</h1>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita deleniti, incidunt
+                            eius, doloribus reiciendis distinctio recusandae pariatur in, obcaecati animi officiis
+                            voluptates sed enim eaque inventore provident dolorum voluptas laudantium.
+
+                        </div>
+                    </a>
+                    <a href="www.google.com">
+                        <div class="card" id="third-card">
+                            <h1 class="card-heading"> Blog3</h1>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Ratione repellat, saepe magni et ad necessitatibus, explicabo quibusdam aliquam expedita
+                            dolores
+                            voluptatem
+                            similique! Deleniti alias ipsam modi dignissimos praesentium facere quisquam?
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-us">
+        <div class="page-padding">
+            <div class="container">
+                <div class="about-us-wrapper">
+                    <h1>About_US</h1>
+                    <div class="card-content" id="1">
+                        <h3> heading</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Id iusto tempora reprehenderit? Repellendus perferendis dolorum
+                            temporibus minus quam provident commodi, tempora explicabo delectus modi illum ipsum.
+                            Asperiores similique assumenda mollitia!'</p>
+                    </div>
+                    <div class="card-content" id="2">
+
+                        <h3> heading</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Id iusto tempora reprehenderit? Repellendus perferendis dolorum
+                            temporibus minus quam provident commodi, tempora explicabo delectus modi illum ipsum.
+                            Asperiores similique assumenda mollitia!'</p>
+                    </div>
+                    <div class="card-content" id="3">
+                        <h3> heading</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Id iusto tempora reprehenderit? Repellendus perferendis dolorum
+                            temporibus minus quam provident commodi, tempora explicabo delectus modi illum ipsum.
+                            Asperiores similique assumenda mollitia!'</p>
+                    </div>
+                    <div class="card-content" id="4">
+                        <h3> heading</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Id iusto tempora reprehenderit? Repellendus perferendis dolorum
+                            temporibus minus quam provident commodi, tempora explicabo delectus modi illum ipsum.
+                            Asperiores similique assumenda mollitia!'</p>
+                    </div>
+                    <div class="card-content" id="5">
+                        <h3> heading</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Id iusto tempora reprehenderit? Repellendus perferendis dolorum
+                            temporibus minus quam provident commodi, tempora explicabo delectus modi illum ipsum.
+                            Asperiores similique assumenda mollitia!'</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+</body>
+
+
+</html>
