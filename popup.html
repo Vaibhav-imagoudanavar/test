@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: cornsilk;
+        }
+
+        .popup-wrapper {
+            position: relative;
+            display: flex;
+            margin-top: 200px;
+            justify-content: center;
+        }
+
+       
+
+        @keyframes popup {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+                
+            }
+
+            100% {
+             margin-top:200px;
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+        #popup {
+           margin-top:-750px ;
+            width: 650px;
+            height: 500px;
+            background-color: lightgreen;
+            border-radius: 20px;
+            transform-origin: 10px 10px;
+            opacity: 0;
+            animation:popup 2s 0.5 ease forwards,
+                    swing 4s 2s ease forwards;
+   
+                  
+        }
+        @keyframes swing {
+            0%{
+            transform: translateY(200) rotateZ(80deg) scale(1);
+            }
+            40%{ 
+                transform: translateY(200) rotateZ(90deg)scale(1);
+            }
+            70%{
+                transform: translateY(0) rotateZ(70deg)scale(1);
+            }
+            100%{
+                transform: translateY(0) rotateZ(70deg)scale(1);
+            }
+        }
+
+        .cross-mark {
+            height: 20px !important;
+            width: 20px !important;
+        }
+
+        .cross-mark {
+            padding: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .cross-mark:after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            content: "\274c";
+            /* use the hex value here... */
+            font-size: 20px;
+            color: #FFF;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        h2 {
+            font-size: 35px;
+            font-weight: 700;
+            color: red;
+        }
+
+        .form-block {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        input {
+            width: 380px;
+            height: 48px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        input::placeholder {
+            font-size: 18px;
+            padding-left: 10px;
+
+        }
+
+        .btn {
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 16px 20px;
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            border-radius: 8px;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div class="page-padding">
+            <div class="container">
+                <div class="popup-wrapper">
+
+                    <div id="popup">
+
+                        <div class="cross-mark">
+
+                        </div>
+                        <div class="form">
+
+                            <h2>LOGIN FORM</h2>
+                            <div class="form-block">
+
+                                <label for="name">Enter your Name</label>
+
+                                <input type="name" placeholder="Name">
+
+                                <br>
+
+                                <label for="email">Enter your Email</label>
+
+                                <input type="email" placeholder="Email">
+                                <br>
+                            </div>
+                            <button class="btn">submit</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
